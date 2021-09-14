@@ -7,7 +7,7 @@ class Peticion(models.Model):
     nombre_empresa=models.CharField(max_length=50)
     ciudad=models.CharField(max_length=50)
     asunto=models.CharField(max_length=50)
-    respuesta=models.CharField
+    respuesta=models.CharField(max_length=150)
     fecha_solicitud=models.DateTimeField()
 
     def __str__(self):
