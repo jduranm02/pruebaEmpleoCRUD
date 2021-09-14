@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block titulo%} Titulo {%endblock titulo%}</title>
+    <link type='text/css' href='{% static "css/style_index.css" %}' rel='stylesheet'/>
 </head>
 <body>{%block cuerpo%}
     <h1> Listado de Peticiones </h1>
@@ -31,8 +33,8 @@
                 <td>{{ Peticion.asunto}}</td>
                 <td>{{ Peticion.respuesta}}</td>
                 <td>{{ Peticion.fecha_solicitud}}</td>
-                <td><a href="{% url 'editarPeticion' Peticion.id %}"> Editar </a> 
-                    <a href="{% url 'eliminarPeticion' Peticion.id %}"> Eliminar </a></td>
+                <td><a class="editar" href="{% url 'editarPeticion' Peticion.id %}"> Editar </a> 
+                    <a class="eliminar" href="{% url 'eliminarPeticion' Peticion.id %}"> Eliminar </a></td>
                 
             </tr>
             {% endfor %}
@@ -40,7 +42,7 @@
     </table>
     {%endblock cuerpo%}
     {%block boton_crearPeticion%} 
-    <button type="submit"><a href="{% url 'crearPeticion' %}"> Crear Petición </a></button>
+    <button type="submit"><a class="crear" href="{% url 'crearPeticion' %}"> Crear Petición </a></button>
     {%endblock boton_crearPeticion%}
 </body>
 </html>
