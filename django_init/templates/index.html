@@ -39,5 +39,8 @@
         </tbody>
     </table>
     {%endblock cuerpo%}
+    {%block boton_crearPeticion%} 
+    <button type="submit"><a href="{% url 'crearPeticion' %}"> Crear Petición </a></button>
+    {%endblock boton_crearPeticion%}
 </body>
 </html>
