@@ -10,3 +10,6 @@ class Peticion(models.Model):
     respuesta=models.CharField
     fecha_solicitud=models.DateTimeField()
 
+    def __str__(self):
+        return self.nombre_empresa
+
