@@ -1,14 +1,14 @@
 {% extends 'index.html' %}
 {%block titulo%} Formulario {%endblock titulo%}
 {%block cuerpo%}  
-<h1> Crear Petición </h1>  
-<form method="POST">
+<h1 class="titulo"> Crear Petición </h1>  
+<form class="formulario" method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit"> Crear Petición </button>
+    <button class="boton_crear2" type="submit"> Crear Petición </button>
 </form>
   
-<button type="submit"><a class="atras" href="{% url 'index' %}"> Atrás </a></button>
+<button class="boton_atras" type="submit"><a class="atras" href="{% url 'index' %}"> Atrás </a></button>
 
 {%endblock cuerpo%}
 {%block boton_crearPeticion%} 
