@@ -26,3 +26,25 @@ def crearPeticion(request):
             form.save()
             return redirect('index')
     return render(request,'crearPeticion.html',contexto)
+
+def editarPeticion(request,id):
+    peticion= Peticion.objects.get(id = id)
+    if request.method == 'GET':
+        form=PeticionForm(instance=peticion)
+        contexto={
+            'form':form
+        }
+    else:
+        form=PeticionForm(request.POST,instance=peticion)
+        contexto={
+            'form':form
+        }
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    return render(request,'crearPeticion.html',contexto)
+    
+def eliminarPeticion(request,id):
+    peticion=Peticion.objects.get(id = id)
+    peticion.delete()
+    return redirect ('index')

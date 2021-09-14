@@ -18,6 +18,7 @@
                 <th>Asunto</th>
                 <th>Respuesta</th>
                 <th>Fecha Solicitud</th>
+                <th> Opción </th>
             </tr>
         </thead>
         <tbody>
@@ -30,6 +31,9 @@
                 <td>{{ Peticion.asunto}}</td>
                 <td>{{ Peticion.respuesta}}</td>
                 <td>{{ Peticion.fecha_solicitud}}</td>
+                <td><a href="{% url 'editarPeticion' Peticion.id %}"> Editar </a> 
+                    <a href="{% url 'eliminarPeticion' Peticion.id %}"> Eliminar </a></td>
+                
             </tr>
             {% endfor %}
         </tbody>

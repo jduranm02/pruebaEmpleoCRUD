@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from aplicaciones.principal.views import inicio,crearPeticion
+from aplicaciones.principal.views import inicio,crearPeticion,editarPeticion,eliminarPeticion
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',inicio,name='index'),
-    path('crearPeticion/',crearPeticion,name='crearPeticion')
+    path('crearPeticion/',crearPeticion,name='crearPeticion'),
+    path('editarPeticion/<int:id>/',editarPeticion,name='editarPeticion'),
+    path('eliminarPeticion/<int:id>/',eliminarPeticion,name='eliminarPeticion')
 ]
