@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'django_init.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'peticion_prueba',
-        'USER': 'postgres',
-        'PASSWORD': '3114123273',
-        'HOST': '127.0.0.1',
+        'NAME': 'ubmkpuym',
+        'USER': 'ubmkpuym',
+        'PASSWORD': 'KXRWMgtu3SPZoovDSurg8DB30VimW511',
+        'HOST': 'chunee.db.elephantsql.com',
         'DATABASE_PORT': '5432'
     }
 }
