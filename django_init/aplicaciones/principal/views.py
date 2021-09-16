@@ -48,3 +48,4 @@ def eliminarPeticion(request,id):
     peticion=Peticion.objects.get(id = id)
     peticion.delete()
     return redirect ('index')
+

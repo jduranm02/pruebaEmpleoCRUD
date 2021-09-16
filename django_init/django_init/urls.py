@@ -22,5 +22,5 @@ urlpatterns = [
     path('',inicio,name='index'),
     path('crearPeticion/',crearPeticion,name='crearPeticion'),
     path('editarPeticion/<int:id>/',editarPeticion,name='editarPeticion'),
-    path('eliminarPeticion/<int:id>/',eliminarPeticion,name='eliminarPeticion')
+    path('eliminarPeticion/<int:id>/',eliminarPeticion,name='eliminarPeticion'),
 ]

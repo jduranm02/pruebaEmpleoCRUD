@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{%block titulo%} Titulo {%endblock titulo%}</title>
+    <title>{%block titulo%} Peticiones {%endblock titulo%}</title>
     <link type='text/css' href='{% static "css/style_index.css" %}' rel='stylesheet'/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script type='text/javascript' src='{% static "js/javascript_index.js" %}'> </script>
@@ -37,7 +37,6 @@
                 <td>{{ Peticion.fecha_solicitud}}</td>
                 <td><a class="editar" href="{% url 'editarPeticion' Peticion.id %}"> Editar </a> 
                     <a class="eliminar" href="{% url 'eliminarPeticion' Peticion.id %}"> Eliminar </a></td>
-                
             </tr>
             {% endfor %}
         </tbody>
