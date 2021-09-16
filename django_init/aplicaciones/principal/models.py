@@ -1,6 +1,5 @@
 from django.db import models
 from django.db.models.expressions import Value
-
 class Peticion(models.Model):
     id = models.AutoField(primary_key=True)
     fecha_inicial=models.DateTimeField()
@@ -40,7 +39,7 @@ class Peticion(models.Model):
                     ('Valledupar','Valledupar'),
                     ('Villavicencio','Villavicencio'),
                 )
-    ciudad=models.CharField(max_length=50,blank=True,choices=elegir_ciudad)
+    ciudad=models.CharField(max_length=50,choices=elegir_ciudad)
     respuesta=models.CharField(max_length=150)
     fecha_solicitud=models.DateTimeField()
     def __str__(self):
